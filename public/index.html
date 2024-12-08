@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 4rem;
+            color: yellow;
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    <script>
+        // Counter to track blinks
+        let blinkCount = 0;
+
+        // Increment counter every second
+        setInterval(() => {
+            blinkCount++;
+            if (blinkCount >= 5) {
+                // Refresh the page after 5 blinks
+                location.reload();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
